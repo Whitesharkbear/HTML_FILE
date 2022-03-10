@@ -1,19 +1,43 @@
+<!-- 
+		table					tr 						td
+	-----------------------------------------------------------
+	align=""				align="" - 수평			align=""
+	border=""				valign=""- 세로			valign=""
+	width=""				width="" - 너비			with=""
+	height=""				height=""- 높이			height=""
+	background=""			background				background=""
+	bgcolor=""										bgcolor=""
+	
+	cellpadding=""									rowspan=""
+	cellspacing=""									colspan=""
+
+ -->
+
 <!DOCTYPE html>
-<html lang = "ko">
-	<head>
-		<meta charset="EUC-KR">
-		<title>기본태그활용</title> 
-	</head>
-	<body> <!-- 주석 -->
-		<pre>
-			&lt;----------------요소----------------&gt;
-		(시작태그)									   (종료태그)
-		
-		- 속성(Attribute)
-			속성명 = "속성값" 으로 구성된다.
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>표만들기</title>
+</head>
+<body bgcolor="#ff0ff">
+	<h1 align="center">표만들기</h1>
+	<hr>
+	
+	<table border="1" align="right">
+		<caption>성적표</caption>
+		<thead>
+			<tr><th>이름</th><th>HTML</tr><th>CSS</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>홍길동</td><td>80</td><td>70</td></tr>
+			<tr><td>이순신</td><td>70</td><td>10</td></tr>
+			<tr><td>강감찬</td><td>20</td><td>90</td></tr>
 			
-		</pre>
-		<p align = "qe">HTML/CSS</p>
-		<hr>
-	</body>
+		</tbody>
+		<tfoot>
+			<tr><th>합계</th><th>225</th><th>230</th></tr>
+		</tfoot>
+	</table>
+
+</body>
 </html>
