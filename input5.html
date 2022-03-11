@@ -1,0 +1,31 @@
+<!-- 
+	wrap : 자동줄바꿈
+			.off
+			.virtual  - 자동줄바꿈 수행 - 전송시에 한줄로 취급
+			.physical - 자동줄바꿈 수행 - 전송시에 여러줄로 취급
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="">
+	
+		텍스트영역1(rows/cols 미지정, 자동 줄바꿈은 미수행)<br>
+		<textarea name="tal" wrap="virtual" placeholder="ta1"></textarea>
+		<br><br>
+		
+		텍스트영역2<br>
+		<textarea name="ta2" cols="40" wrap="virtual" placeholder="ta2"></textarea>
+		<br><br>
+		
+		<input type="submit" value="전송">
+		
+	</form>
+</body>
+</html>

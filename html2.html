@@ -1,43 +1,28 @@
-<!-- 
-		table					tr 						td
-	-----------------------------------------------------------
-	align=""				align="" - 수평			align=""
-	border=""				valign=""- 세로			valign=""
-	width=""				width="" - 너비			with=""
-	height=""				height=""- 높이			height=""
-	background=""			background				background=""
-	bgcolor=""										bgcolor=""
-	
-	cellpadding=""									rowspan=""
-	cellspacing=""									colspan=""
-
- -->
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>표만들기</title>
+<title>Insert title here</title>
 </head>
-<body bgcolor="#ff0ff">
-	<h1 align="center">표만들기</h1>
+<body>
+
+	<p>div : 블록형식으로 공간의 영역을 한줄로 분할해준다. 자동줄바꿈이 된다.</p>
+	<p>span: 인라인형식으로 입력하는 내용만큼만 공간을 분할해준다. 자동줄바꿈이 되지 않는다.</p>
+	<br>
+	<p>블록형식의 div는 스타일을 자유롭게 지정할 수 있지만</p>
+	<p>인라인형식의 span은 태그안의 내용을 기준으로 너비와 높이가 지정된다. 좌우여백만 지정가능하다.</p>
+	
+	<div style="background: #ABF200">하늘</div>
+	<div style="background: #5CD1E5">바다</div>
+	<div>섬</div>
+	<div style="background: #F56789; width: 200px; height: 200px; text-align: center;">구름</div>
+	
 	<hr>
 	
-	<table border="1" align="right">
-		<caption>성적표</caption>
-		<thead>
-			<tr><th>이름</th><th>HTML</tr><th>CSS</th></tr>
-		</thead>
-		<tbody>
-			<tr><td>홍길동</td><td>80</td><td>70</td></tr>
-			<tr><td>이순신</td><td>70</td><td>10</td></tr>
-			<tr><td>강감찬</td><td>20</td><td>90</td></tr>
-			
-		</tbody>
-		<tfoot>
-			<tr><th>합계</th><th>225</th><th>230</th></tr>
-		</tfoot>
-	</table>
-
+	<span style="background: #ABF200; width: 200px; height: 200px; text-align: center">봄</span>&nbsp;&nbsp;
+	<span style="background: #5CD1E5">여름</span>&nbsp;&nbsp;
+	<span>가을</span>&nbsp;&nbsp;
+	<span style="background: #F56789">겨울</span>&nbsp;&nbsp;
+	
 </body>
 </html>

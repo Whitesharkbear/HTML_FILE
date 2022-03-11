@@ -1,0 +1,53 @@
+<!-- 
+	웹 폼
+		웹 페이지를 이용해서 사용자가 데이터를 입력받는다.
+		
+		. 종류
+			타입				내용
+			---------------------------------
+			text			한줄텍스트 입력창
+			textarea		여러텍스트 입력창
+			password		암호 입력창
+			button			단순 버튼
+			submit			입력받은 데이터를 웹서버로 전송시키는 버튼
+			reset			입력받은 데이터를 취소(초기화) 버튼
+			image 			이미지 버튼
+			checkbox		체크박스
+			radio			라디오 버튼
+			select			option와 함께... 드롭다운 리스트를 가진 콤보박스
+			number			숫자입력
+			range			범위지정
+			color			색상
+			tel				전화번호
+			url				URL
+			search			검색
+			file			파일선택
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>입력폼 학습</h1>
+	<hr>
+	<br>
+	
+	<form name="Log_fo">
+		사용자ID: <input type="text"		value=""><br>
+		비밀번호: <input type="password"	value=""><br>
+		
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+	</form>
+	<hr>
+	<form action="http://search.naver.com/search.naver" method="get">
+		검색단어: <input type="text" name=query><br>
+		전   송: <input type="submit" value="검색">
+	</form>
+	
+</body>
+</html>

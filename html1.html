@@ -1,3 +1,12 @@
+<!-- 
+
+	그룹핑
+		. div, span 요소
+		. div  블록요소 - 줄바꿈이 된다. width, height
+		. span 인라인요소- 블록요소안에서 사용되고 width, height 설정불가
+					 - em, strong, i, sub, sup 등등 
+
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,33 +14,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>테이블만들기</h3>
-	<hr>
+
+	<h1>그룹핑</h1>
 	
-	<table border="1">
-		<caption>1월 달력</caption>
-		
-		<thead>
-		<tr>
-		<th></th>월<th></th>화<th></th>수</tr>
-		</tr>
-		</thead>
-		
-		<tbody>
-		<tr>
-		<td><td>1<td><td>2<td><td>3</td>
-		</tr>	
-		
-		<tr>
-		<td><td>4<td><td>5<td><td>6</tr>
-		</tr>
-		</tbody>
-		
-		<tfoot>
-		<tr>
-		<td><td>7<td><td>8<td><td>9</tr>
-		</tfoot>
+	<div align="center" style="background: yellow;">
+		<ul>
+			<li><a href="#">홈</a></li>
+			<li><a href="#">회사소개</a></li>
+		</ul>
+		<address>COPYRIGHT &copy; myTech. All Rights Reseved</address>
+	</div>
+
+	<h3>span요소</h3>
 	
-	</table>
+	<ul>
+		<li><span style="background: orange"><strong><a href="#">오늘의 book</a></strong></span>HTML5와 CSS3</li>
+		
+	</ul>
+
 </body>
 </html>

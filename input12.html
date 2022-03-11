@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>2022년 2월 3일 12시 50분</h3>
+	<hr>
+
+	<form action="">
+		<pre>
+			month	: <input type="month" value="2022-02"><br>
+			week	: <input type="week" value="2022-w25"><br>
+			date	: <input type="date" value="2022-02-03"><br>
+			time	: <input type="time" value="12:50"><br> 
+			
+			local	: <input type="datetime" value="2022-02-03T12:30:10:20">
+		</pre>
+	</form>
+ 	<form>
+   
+      	<table border="1">
+         	<tr>
+            	<td>생일</td>
+            	<td><input type= "date" value="2022-02-03"></td>
+        	</tr>
+        	<tr>
+            	<td>생파시간</td>
+            	<td><input type="time" value=""></td>
+        	</tr>
+         	<tr>
+            	<td><a href="http://www.naver.com">파티장소</a></td>
+            	<td><input type="text"></td>
+         	</tr>
+         	<tr>
+            	<td align="center" colspan="2"><input type="submit" value="확인"></td>
+         	</tr>
+         
+     	 </table>
+   
+   </form>
+
+	<form>
+		<fieldset>
+			<legend>회원정보</legend>
+			이 메 일: <input type="email" placeholder="id@host.com"><br>
+			홈페이지:  <input type="url" placeholder="http://"><br> 
+			전화번호:  <input type="tel" placeholder="010-0000-0000"><br>
+		</fieldset>
+		<small><b><i>질문: Tel.010-1111-2222</i></b></small>
+	</form>
+
+	<form>
+		지속시간(0.0 ~ 10.0시간) 
+		<input type="number" min=0.0 max="10.0" step="0.5"><br><br> 
+		
+		온도설정: 10 &deg;
+		<input type="range" min="10" max="30" list="temper">30&deg;
+		<datalist id="temper">
+			<option value="12" label="low">
+			<option value="20" label="medium">
+			<option value="28" label="hight">
+		</datalist>
+
+	</form>
+
+</body>
+</html>

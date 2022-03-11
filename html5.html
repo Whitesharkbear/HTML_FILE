@@ -1,3 +1,35 @@
+<!--
+	header
+		- 페이지(혹은 내용)상단의 머리말을 지정.
+		- 페이지 제목, 소개글, 글이나 로고 등이 포함된다.
+	
+	nav
+		- 페이지 이동을 위한 메뉴영역 지정.
+		- 이전, 다음, 특정, 사이트 연결.
+		- 필요한 곳에 중복 지정하여 사용.
+	
+	section(형식)
+		- 제목을 갖는 연관된 내용 영역을 지정.
+		- h1 ~ h6 표제를 활용해서 내용들을 그룹화한다.
+		- section 안에 section을 포함하여 다양한 태그들과 중첩사용.
+		
+	article(내용)
+		- 독립적인 개별 내용 영역을 지정.
+		- 블로그나 댓글, 신문, 잡지의 기사 등을 제공.
+		- 별도로 배포가능하거나 재사용이 가능한 내용으로 그룹화한다.
+		- section과 article이 중첩되어 사용되어진다.
+	
+	aside(보조)
+		- 페이지의 좌우, 측면공간 같은 보조영역을 지정.
+		- 광고, 즐겨찾기 링크, 관련 이미지 등 제공.
+		- section, article 안에 여러번 포함가능.
+		
+	footer
+		- 페이지 하단
+		- 작성자, 날짜, 저작권, 주소, 상호 등..
+		
+	 
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,18 +37,54 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>수평정렬 align, 수직정렬 valign</h1>
-	<hr>
+	<header>
+		<h1>사이트제목</h1>
+		<nav>글로벌 내비게이션</nav>
+	</header>
 	
-	<table border="2" aligin="center">
-
-		<tbody>
-			<tr><td></td><td>중간</td><td>기말</td><td>성적</td></tr>
-			<tr><td bgcolor="blue">국어</td><td bgcolor="blue">95</td><td bgcolor="blue">90</td><td bgcolor="yellow">A</td></tr>
-			<tr><td>수학</td><td>84</td><td>95</td><td>B</td></tr>
+	<nav>
+		<ul>
+			<li><A href="#">HOME</A></li>
+			<li><A href="#">페이지1</A></li>
+			<li><A href="#">페이지2</A></li>
 			
-		</tbody>
-	</table>
+		</ul>
+	</nav>
+	<nav>
+		<p><A>HOME</A> <a href="#">카테고리명</a> <a href="#">기사제목</a></p>
+	</nav>
+	
+	<article>
+		<header>
+			<h1>블로그 기사제목1</h1>
+			<p><time datetime="2022-02-03">2022년 2월 3일</time></p>
+		</header>
+		
+		<main>
+			<section>
+				<h1>1. 큰 표제</h1>
+				<p>블로그 기사 본문이 들어갑니다.</p>
+			</section>
+			<section>
+				<h1>2. 큰 표제</h1>
+				<p>블로그 기사 본문이 들어갑니다.</p>
+			</section>
+		</main>
+		<footer>
+		<p><a href="#">코멘트를 본다</a>
+		</footer>
+	</article>
+	<aside>
+		<h2>관련 링크</h2>
+		<ul>
+			<li><A href="#">관련기사제목1</A></li>
+			<li><A href="#">관련기사제목2</A></li>
+		</ul>
+	</aside>
+	
+	<footer>
+		<p><small>COPYRIGHT& All Rights Reserved</p>
+	</footer>
 
 </body>
 </html>
