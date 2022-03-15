@@ -1,36 +1,88 @@
 <!-- 
 
-	그룹핑
-		. div, span 요소
-		. div  블록요소 - 줄바꿈이 된다. width, height
-		. span 인라인요소- 블록요소안에서 사용되고 width, height 설정불가
-					 - em, strong, i, sub, sup 등등 
+	그래픽
+		. 캔버스(canvas)
+			HTML5에 추가된 새로운 태그
+			자바스크립트 코드로 웹 페이지에 자유롭게 그래픽을 그릴 수 있는 기능
+			
+		. 기능 : 도형, 글자그리기, 이미지그리기, 그래프, 애니메이션, 대형게임, 지도 등..
+		. 웹 표준
+		. 비트맵방식으로 처리됨으로 매우 빠르다.
+		
+	구현 : <canvas width, height, style></canvas>
+			. 캔버스 영역 설정
+			. 캔버스 DOM객체를 가져오기
+			. DOM객체 속에서 Context객체를 가져온다.
+			. context객체를 이용해서 그린다.
+				- 경로를 모아서 한번에 그린다.
+				- 바로 그린다.
+				
+			. 프로퍼티
+				- width, height, style
+				- getContext('2d')
+				
+			. Context 객체
+				- strokeStyle : 선색
+				- fillStyle : 채우기색
+				- lineWidth : 선두께
+				- font : 텍스트폰트
+				- textAlign : 텍스트정렬	
+				
+				- beginPath()
+				- moveTo()
+				- lineTo()
+				- rect() : 사각형
+				- arc() : 원호
+				- stroke() : 외곽선만 그린다.
+				- fill() : 채워서 그린다.
+				-----------------------------
+				- strokeText() : 텍스트를 그린다.
+				- fillText() : 텍스트를 채워서 그린다.
+				- strokeRect()
+				- fillRect()
+				- fillArc()
+				- drawImage()
+				- clearRect()
+				- clearArc()
 
  -->
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<style type="text/css">
+
+	#canvas1{
+		margin: 0px;
+		width: 150px;
+		height: 150px;
+		background-color: #ff8c64;
+	}
+	#canvas2{
+		margin: 0px;
+		width: 150px;
+		height: 150px;
+		background-color: #ff665A;
+	}
+	#canvas3{
+		width: 306px;
+		height: 150px;
+		background-color: #7d6b7d;
+	}
+	
+
+
+</style>
 </head>
 <body>
-
-	<h1>그룹핑</h1>
-	
-	<div align="center" style="background: yellow;">
-		<ul>
-			<li><a href="#">홈</a></li>
-			<li><a href="#">회사소개</a></li>
-		</ul>
-		<address>COPYRIGHT &copy; myTech. All Rights Reseved</address>
-	</div>
-
-	<h3>span요소</h3>
-	
-	<ul>
-		<li><span style="background: orange"><strong><a href="#">오늘의 book</a></strong></span>HTML5와 CSS3</li>
-		
-	</ul>
+	<h3>3개의 캔버스를 만들어봅니다.</h3>
+	<p>여름나들이<span>하루</span>가 무척 더워졌습니다.</p>
+	<hr>
+	<canvas id='canvas1'>이 태그를 지원하지 않는 브라우저입니다.</canvas>
+	<canvas id='canvas2'>두번째 캔버스</canvas>
+	<canvas id='canvas3' width ='306' height="150" style="background-color: #7D6B7D">세번째 캔버스</canvas>
 
 </body>
 </html>

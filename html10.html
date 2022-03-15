@@ -1,32 +1,88 @@
-<!-- 
-	figure태그
-		. 본문에 삽입된 그림을 블록화하는 시멘틱태그
-		. 이미지, 동영상, 소스코드 등 콘텐츠를 블록화 할 수 있다.
- -->
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	#figure{background: yellow;}
+	td{
+		text-align: right;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
 </style>
+<script type="text/javascript">
+
+	function draw() {
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		
+		var x = document.getElementById('x').value;
+		var y = document.getElementById('y').value;
+		var radius = document.getElementById('radius').value;
+		var ori = document.getElementById('orientation');
+		var index = ori.selectedIndex;
+		var orientation = ori.options[index].value;
+			orientation = (orientation == "true")? true: false;
+			
+		var startAngle = document.getElementById('startAngle').value;
+			startAngle = Math.PI*parseInt(startAngle)/180;
+			
+		var endAngle = document.getElementById('endAngle').value;
+			endAngle = Math.PI*parseInt(endAngle)/180;
+			
+		var lineWidth = document.getElementById('lineWidth').value;
+		var strokeStyle = document.getElementById('strokeStyle').value;
+		
+		context.beginPath();
+		context.lineWidth = lineWidth;
+		context.strokeStyle=strokeStyle;
+		context.arc(x,y,radius,startAngle,endAngle,orientation);
+		
+		context.stroke();
+	}
+	function erase() {
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		context.clearRect(0,0,canvas.width, canvas.height);
+	}
+
+</script>
 </head>
 <body>
-
-	<h2>figure태그활용</h2>
-	<hr>
-	<figure id="figure">
-		<figcaption>alert()함수활용</figcaption>
-		<pre>
-			<code>function f(){alert("경고합니다");}</code>		
-		</pre>
-		<hr>
-		<small>실행결과</small>
-		<pre>
-			<img src="image/error.png">
-		</pre>
-	</figure>
+	<form>
+		<table>
+			<tr>
+				<td><label>x<input id='x' type="number" value="100"></label></td>		
+				<td><label>y<input id='y' type="number" value="100"></label></td>
+			</tr>
+			<tr>
+				<td><label>반지름<input id='radius' type="number" value="80"></label></td>
+				<td><label>방향
+						<select id='orentation'>
+							<option value="false" selected>시계방향</option>
+							<option value="true">반시계방향</option>
+						</select>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label>시작각도<input id='startAngle' type="number" value="0"></label></td>
+				<td><label>끝각도<input id='endAngle' type="number" value="360"></label></td>
+			</tr>
+			<tr>
+				<td><label>선 굵기<input id='lineWidth' type="number" value="1"></label></td>
+				<td><label>선 색<input id='strokeStyle' type="color" value="#000000"></label></td>
+			</tr>
+			<tr>
+				<td><label><button type="button" onclick="draw()">그리기</button></label></td>
+				<td><button type="button" onclick="erase()">지우기</button></td>
+			</tr>
+		</table>
+	</form>
+	<canvas
+		id = "myCanvas" width="500" height="200" style="background-color: aliceblue";
+	>
+	</canvas>
 </body>
 </html>

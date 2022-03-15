@@ -3,66 +3,43 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<style type="text/css">
-
-	body{margin: 0px; padding: 0px;}
-	#wrap{margin: 0px; padding: 2%; width: 96%; background: #f0f0f0;}
-	h1{text-align: center;}
-	#gnb{text-align: right;}
-	#left{float: left; margin-right: 0.5%; width: 33%; height: 300px; text-align: center; background: red;}
-	#center{float: left; width: 33%; height: 300px; text-align: center; background: orange;}
-	#right{float: right; width: 33%; height: 300px; text-align: center; background: green;}
-	#footer{clear: both; padding: 5px; text-align: center; height: 500px;}
-	
-</style>
 </head>
 <body>
-
-	<div id="wrap">
+	<canvas
+		id="myCanvas"
+		style="background-color: aliceblue"
+		width="1600px"
+		height="800px"
+		
+	>
+	</canvas>
+	<script type="text/javascript">
 	
-		<div id="skipnavi">
-			<A href="#contentwrap">콘텐츠바로가기</A>
-		</div>
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext('2d');
 		
-		<div id="header">
+		context.beginPath();
+		context.rect(300,100,500,500);
+		context.stroke();
 		
-				<h1>웹 프로그래밍</h1>
-				<div id="gnb">
-					<a href="#"><b>변수와 연산자</b></a>&nbsp;&nbsp;
-					<a href="#"><em>조건문과 반복문</em></a>&nbsp;&nbsp;
-					<a href="#"><i>예외처리</i></a>
-					<a href="#">클래스</a>
-				</div>		
-		</div>
+		context.fillStyle="#123456";
+		context.fillRect(100,100,100,100);
 		
-		<hr>
+		context.beginPath();
+		context.strokeStyle="#a91800ff";
+		context.lineWidth = 40;
+		context.arc(1000, 500, 150, 0, 1.5*Math.PI, false);
+		context.closePath();
+		context.stroke();
+		context.fillStyle="yellow";
+		context.fill();
 		
-		<div id="contentwrap">
+		context.beginPath();
+		context.strokeStyle="green";
+		context.arc(980,200,100,1,5*Math.PI,true);
+		context.stroke();
 		
-			<div id="left">
-				<h2>왼쪽콘텐츠</h2>
-				<p>내용</p>
-			</div>
-			
-			<div id="center">
-				<h2>가운데 콘텐츠</h2>
-				<p>내용</p>
-			</div>
-			
-			<div id="right">
-				<h2>오른쪽 콘텐츠</h2>
-				<p>내용</p>
-			</div>
-			
-		</div>
-	</div>
+	</script>
 	
-	<div id="footer">
-		<hr>
-		<address> 서울시 강남구 논현동 10층 그린아카데미, 연락처:02-1234-1234<br>
-		COPYRIGHT&copy: myTech. All Rights Reserved</address>
-	
-	
-	</div>
 </body>
 </html>

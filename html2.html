@@ -5,24 +5,43 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<p>div : 블록형식으로 공간의 영역을 한줄로 분할해준다. 자동줄바꿈이 된다.</p>
-	<p>span: 인라인형식으로 입력하는 내용만큼만 공간을 분할해준다. 자동줄바꿈이 되지 않는다.</p>
-	<br>
-	<p>블록형식의 div는 스타일을 자유롭게 지정할 수 있지만</p>
-	<p>인라인형식의 span은 태그안의 내용을 기준으로 너비와 높이가 지정된다. 좌우여백만 지정가능하다.</p>
+	<canvas
+		id = "myCanvas"
+		width="700px"
+		height="500px"
+		style="background-color: black; border-radius: 20px"
 	
-	<div style="background: #ABF200">하늘</div>
-	<div style="background: #5CD1E5">바다</div>
-	<div>섬</div>
-	<div style="background: #F56789; width: 200px; height: 200px; text-align: center;">구름</div>
+	>
 	
-	<hr>
+	</canvas>
+	<script type="text/javascript">
 	
-	<span style="background: #ABF200; width: 200px; height: 200px; text-align: center">봄</span>&nbsp;&nbsp;
-	<span style="background: #5CD1E5">여름</span>&nbsp;&nbsp;
-	<span>가을</span>&nbsp;&nbsp;
-	<span style="background: #F56789">겨울</span>&nbsp;&nbsp;
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext('2d');
+		
+		context.strokeStyle = "red";
+		context.fillStyle = "yellow";
+		context.lineWidth = 30;
+		
+		context.beginPath();
+		context.moveTo(120,80);
+		context.lineTo(180,300);
+		context.lineTo(400,400);
+		context.closePath();
+		
+		context.stroke();
+		context.fill();
+		
+		context.fillStyle = "skyblue";
+		context.font = "30px Gothic,고딕체";
+		
+		context.fillText("선으로 그리는 글자", 60, 450);
+		
+		context.fillStyle = "white";
+		context.font = "40px 나눔고딕체";
+		context.fillText("재밌는 자바스크립트",250,200);
+		
 	
+	</script>
 </body>
 </html>

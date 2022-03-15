@@ -1,3 +1,17 @@
+<!-- 
+
+	var img = new Image()
+	img.onload = function(){}
+	img.src = 
+	
+		drawImage(img, x, y, w, h)
+		drawImage(img, sx, sy, sw, sh,   dx, dy, dw, dh)
+
+		canvas.width
+		canvas.height
+		
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,51 +19,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-		<header>웹 페이지 타이틀</header>
-		<nav id="menu">
-			<a href="#"><font color="lightgray">메뉴항목1</font></a>
-			<a href="#"><font color="lightgray">메뉴항목2</font></a>
-			<a href="#"><span>메뉴항목3</span>입니다</a>
-		</nav>
-		<hr color="red">
-		<section>
-		Lorem Ipsum is simply dummy text of the printing 
-		and typesetting industry. Lorem Ipsum has been 
-		the industry's standard dummy text ever since 
-		the 1500s, when an unknown printer took a 
-		galley of type and scrambled it to make a 
-		type specimen book. It has survived not only 
-		five centuries, but also the leap into electronic
-		typesetting, remaining essentially unchanged. 
-		It was popularised in the 1960s with the release
-		of Letraset sheets containing Lorem Ipsum 
-		passages, and more recently with desktop 
-		publishing software like Aldus PageMaker 
-		including versions of Lorem Ipsum.
-		</section>
-		<hr>
-		<article>
-		"Lorem ipsum dolor sit amet, consectetur 
-		adipiscing elit, sed do eiusmod tempor 
-		incididunt ut labore et dolore magna aliqua. 
-		Ut enim ad minim veniam, quis nostrud exercitation 
-		ullamco laboris nisi ut aliquip ex ea commodo 
-		consequat. Duis aute irure dolor in reprehenderit 
-		in voluptate velit esse cillum dolore eu fugiat 
-		nulla pariatur. Excepteur sint occaecat cupidatat 
-		non proident, sunt in culpa qui officia deserunt 
-		mollit anim id est laborum."
-		</article>
-		<aside>
-			<ul>
-				<li>참고내용1</li>
-				<li>참고내용2</li>
-			</ul>
-		</aside>
-		<footer>
-			<address>연락처: 000-0000-0000 &nbsp;&nbsp; 웹페이지 개발자</address>
-		</footer>
-	</div>
+	<canvas
+		id="myCanvas"
+		width="500"
+		height="500"
+		style="background-color: aliceblue; border: 20px solid #696969"	
+
+	>
+	
+	</canvas>
+	<script type="text/javascript">
+	
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext('2d');
+	
+	var img = Image();
+	img.onload=function(){
+		context.drawImage(img,0,0,canvas.width,canvas.height);
+		
+	}
+	img.src = "image/coal.png";
+	
+	</script>
 </body>
 </html>

@@ -3,31 +3,36 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<style type="text/css">
+
+	#myCanvas{
+		box-shadow: 8px 8px 4px #E8E6BC;
+		border-radius: 2px;
+	}
+
+</style>
 </head>
 <body>
-	<div style="background-color: orange;">
-	"Lorem ipsum dolor sit amet, 
-	consectetur adipiscing elit, 
-	sed do eiusmod tempor incididunt 
-	ut labore et dolore magna aliqua. 
-	Ut enim ad minim veniam, 
-	quis nostrud exercitation ullamco 
-	laboris nisi ut aliquip ex ea commodo consequat.
-	Duis aute irure dolor in reprehenderit in voluptate velit esse 
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	 sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-	<div style="background-color: Lime; width: 500px; height: 200px;">
-	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-	laboris nisi ut aliquip ex ea commodo consequat. 
-	Duis aute irure dolor in reprehenderit in voluptate velit 
-	esse cillum dolore eu fugiat nulla pariatur. 
-	Excepteur sint occaecat cupidatat non proident, sunt i
-	n culpa qui officia deserunt mollit anim id est laborum."
-	</div>
-	<div style="background-color: blue;">Lorem ipsum3</div>
-	<div style="background-color: yellow;">Lorem ipsum4</div>
-	<div style="background-color: green;">Lorem ipsum5</div>
+
+	<canvas
+		id = "myCanvas"
+		style="background-color: aliceblue"
+		width="500"
+		height="500"
+	>
+	</canvas>
+	<script type="text/javascript">
+	
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		
+		context.strokeStyle="red";
+		context.beginPath();
+		for(var i=0; i<10; i++){
+			context.rect(10+i*40,10+i*10,50,50)
+		}
+		context.stroke();
+	
+	</script>
 </body>
 </html>
